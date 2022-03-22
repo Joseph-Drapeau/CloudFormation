@@ -1,0 +1,16 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: "AWS CloudFormation template for EC2-VPC. I created it from AWS' documentation."
+
+Resources:
+  myVPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsSupport: 'false'
+      EnableDnsHostnames: 'false'
+      InstanceTenacy: dedicated
+      Tags:
+      - Key: stackPractice
+        Value: production
